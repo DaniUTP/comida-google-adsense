@@ -1,0 +1,158 @@
+{
+    "header": {
+        "logo": "Cucina Mondiale",
+        "stats": {
+            "countries": "50+ Paesi",
+            "dishes": "100+ Piatti",
+            "videos": "100+ Video",
+            "updated": "Aggiornato Quotidianamente"
+        }
+    },
+    "hero": {
+        "title": "+100 Piatti Gastronomici del Mondo",
+        "description": "La collezione più completa di ricette internazionali con ingredienti esatti, preparazione passo dopo passo e tutorial video verificati."
+    },
+    "search": {
+        "placeholder": "Cerca piatti, ingredienti o paesi...",
+        "noResults": "Nessun piatto trovato",
+        "noResultsText": "Prova con altri filtri o termini di ricerca.",
+        "resetFilters": "Mostra tutti i piatti"
+    },
+    "filters": {
+        "continent": "Filtra per Continente",
+        "cuisine": "Filtra per Tipo di Cucina"
+    },
+    "sidebar": {
+        "topCuisines": "Top Cucine",
+        "trending": "Tendenze di Oggi",
+        "continents": "Piatti per Continente"
+    },
+    "footer": {
+        "about": {
+            "title": "Chi Siamo",
+            "text": "La collezione più completa di ricette internazionali verificate."
+        },
+        "quickLinks": {
+            "title": "Link Rapidi",
+            "home": "Home",
+            "recipes": "Ricette per Paese",
+            "videos": "Tutorial Video",
+            "contact": "Contatto"
+        },
+        "categories": {
+            "title": "Categorie Popolari",
+            "italian": "Italiana",
+            "mexican": "Messicana",
+            "asian": "Asiatica",
+            "mediterranean": "Mediterranea"
+        },
+        "resources": {
+            "title": "Risorse",
+            "ingredients": "Guida agli Ingredienti",
+            "techniques": "Tecniche di Cucina",
+            "conversions": "Conversioni Culinaria",
+            "seasonal": "Ingredienti di Stagione"
+        },
+        "copyright": "© 2025 Cucina Mondiale. Tutti i diritti riservati."
+    },
+    "modal": {
+        "ingredients": "Ingredienti",
+        "instructions": "Preparazione",
+        "video": {
+            "title": "Tutorial Video"
+        }
+    },
+    "continents": {
+        "europe": "Europa",
+        "asia": "Asia",
+        "america": "America",
+        "africa": "Africa",
+        "oceania": "Oceania"
+    },
+    "cuisines": {
+        "mediterranean": "Mediterranea",
+        "italian": "Italiana",
+        "mexican": "Messicana",
+        "japanese": "Giapponese",
+        "thai": "Tailandese",
+        "french": "Francese",
+        "peruvian": "Peruviana",
+        "brazilian": "Brasiliana",
+        "hungarian": "Ungherese",
+        "indian": "Indiana",
+        "vietnamese": "Vietnamita",
+        "chinese": "Cinese",
+        "argentinian": "Argentina",
+        "american": "Americana",
+        "british": "Britannica",
+        "canadese": "Canadese",
+        "eastern_european": "Europa dell'Est",
+        "turkish": "Turca",
+        "moroccan": "Marocchina",
+        "colombian": "Colombiana",
+        "west_african": "Africa Occidentale",
+        "korean": "Coreana",
+        "south_african": "Sudafricana",
+        "venezuelan": "Venezuelana",
+        "german": "Tedesca",
+        "australian": "Australiana",
+        "malaysian": "Malese",
+        "arabic": "Araba",
+        "portuguese": "Portoghese",
+        "swiss": "Svizzera",
+        "scottish": "Scozzese",
+        "belgian": "Belga",
+        "spanish": "Spagnola",
+        "dominican": "Dominicana",
+        "balkan": "Balcanica",
+        "indonesian": "Indonesiana",
+        "russian": "Russa",
+        "hawaiian": "Hawaiana",
+        "swedish": "Svedese",
+        "latin_american": "Latinoamericana",
+        "chilean": "Cilena",
+        "festive": "Festiva",
+        "bulgarian": "Bulgara"
+    },
+    "countries": {
+        "Spain": "Spagna",
+        "Italy": "Italia",
+        "Mexico": "Messico",
+        "Japan": "Giappone",
+        "Thailand": "Tailandia",
+        "France": "Francia",
+        "Peru": "Perù",
+        "Greece": "Grecia",
+        "USA": "USA",
+        "USA (Hawaii)": "USA (Hawaii)",
+        "India": "India",
+        "Vietnam": "Vietnam",
+        "China": "Cina",
+        "Turkey": "Turchia",
+        "Morocco": "Marocco",
+        "Brazyl": "Brasile",
+        "Hungary": "Ungheria",
+        "Argentina": "Argentina",
+        "UK": "Regno Unito",
+        "Canada": "Canada",
+        "Romania": "Romania",
+        "South Africa": "Sudafrica",
+        "Colombia": "Colombia",
+        "Venezuela": "Venezuela",
+        "Nigeria": "Nigeria",
+        "South Korea": "Corea del Sud"
+    },
+    "difficulties": {
+        "easy": "Facile",
+        "medium": "Medio",
+        "hard": "Difficile"
+    },
+    "ui": {
+        "viewRecipe": "Vedi Ricetta",
+        "prepTime": "Prep",
+        "cookTime": "Cottura",
+        "totalTime": "Totale",
+        "servings": "Porzioni",
+        "difficulty": "Difficoltà"
+    }
+}

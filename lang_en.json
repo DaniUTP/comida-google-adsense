@@ -1,0 +1,158 @@
+{
+    "header": {
+        "logo": "World Cuisine",
+        "stats": {
+            "countries": "50+ Countries",
+            "dishes": "100+ Dishes",
+            "videos": "100+ Videos",
+            "updated": "Daily Updated"
+        }
+    },
+    "hero": {
+        "title": "+100 Gastronomic Dishes of the World",
+        "description": "The most complete collection of international recipes with exact ingredients, step-by-step preparation and verified video tutorials."
+    },
+    "search": {
+        "placeholder": "Search dishes, ingredients or countries...",
+        "noResults": "No dishes found",
+        "noResultsText": "Try other filters or search terms.",
+        "resetFilters": "Show all dishes"
+    },
+    "filters": {
+        "continent": "Filter by Continent",
+        "cuisine": "Filter by Cuisine Type"
+    },
+    "sidebar": {
+        "topCuisines": "Top Cuisines",
+        "trending": "Today's Trending",
+        "continents": "Dishes by Continent"
+    },
+    "footer": {
+        "about": {
+            "title": "About Us",
+            "text": "The most complete collection of verified international recipes."
+        },
+        "quickLinks": {
+            "title": "Quick Links",
+            "home": "Home",
+            "recipes": "Recipes by Country",
+            "videos": "Video Tutorials",
+            "contact": "Contact"
+        },
+        "categories": {
+            "title": "Popular Categories",
+            "italian": "Italian",
+            "mexican": "Mexican",
+            "asian": "Asian",
+            "mediterranean": "Mediterranean"
+        },
+        "resources": {
+            "title": "Resources",
+            "ingredients": "Ingredient Guide",
+            "techniques": "Cooking Techniques",
+            "conversions": "Culinary Conversions",
+            "seasonal": "Seasonal Ingredients"
+        },
+        "copyright": "© 2025 World Cuisine. All rights reserved."
+    },
+    "modal": {
+        "ingredients": "Ingredients",
+        "instructions": "Preparation",
+        "video": {
+            "title": "Video Tutorial"
+        }
+    },
+    "continents": {
+        "europe": "Europe",
+        "asia": "Asia",
+        "america": "America",
+        "africa": "Africa",
+        "oceania": "Oceania"
+    },
+    "cuisines": {
+        "mediterranean": "Mediterranean",
+        "italian": "Italian",
+        "mexican": "Mexican",
+        "japanese": "Japanese",
+        "thai": "Thai",
+        "french": "French",
+        "peruvian": "Peruvian",
+        "brazilian": "Brazilian",
+        "hungarian": "Hungarian",
+        "indian": "Indian",
+        "vietnamese": "Vietnamese",
+        "chinese": "Chinese",
+        "argentinian": "Argentinian",
+        "american": "American",
+        "british": "British",
+        "canadian": "Canadian",
+        "eastern_european": "Eastern European",
+        "turkish": "Turkish",
+        "moroccan": "Moroccan",
+        "colombian": "Colombian",
+        "west_african": "West African",
+        "korean": "Korean",
+        "south_african": "South African",
+        "venezuelan": "Venezuelan",
+        "german": "German",
+        "australian": "Australian",
+        "malaysian": "Malaysian",
+        "arabic": "Arabic",
+        "portuguese": "Portuguese",
+        "swiss": "Swiss",
+        "scottish": "Scottish",
+        "belgian": "Belgian",
+        "spanish": "Spanish",
+        "dominican": "Dominican",
+        "balkan": "Balkan",
+        "indonesian": "Indonesian",
+        "russian": "Russian",
+        "hawaiian": "Hawaiian",
+        "swedish": "Swedish",
+        "latin_american": "Latin American",
+        "chilean": "Chilean",
+        "festive": "Festive",
+        "bulgarian": "Bulgarian"
+    },
+    "countries": {
+        "Spain": "Spain",
+        "Italy": "Italy",
+        "Mexico": "Mexico",
+        "Japan": "Japan",
+        "Thailand": "Thailand",
+        "France": "France",
+        "Peru": "Peru",
+        "Greece": "Greece",
+        "USA": "USA",
+        "USA (Hawaii)": "USA (Hawaii)",
+        "India": "India",
+        "Vietnam": "Vietnam",
+        "China": "China",
+        "Turkey": "Turkey",
+        "Morocco": "Morocco",
+        "Brazyl": "Brazil",
+        "Hungary": "Hungary",
+        "Argentina": "Argentina",
+        "UK": "UK",
+        "Canada": "Canada",
+        "Romania": "Romania",
+        "South Africa": "South Africa",
+        "Colombia": "Colombia",
+        "Venezuela": "Venezuela",
+        "Nigeria": "Nigeria",
+        "South Korea": "South Korea"
+    },
+    "difficulties": {
+        "easy": "Easy",
+        "medium": "Medium",
+        "hard": "Hard"
+    },
+    "ui": {
+        "viewRecipe": "View Recipe",
+        "prepTime": "Prep",
+        "cookTime": "Cook",
+        "totalTime": "Total",
+        "servings": "Servings",
+        "difficulty": "Difficulty"
+    }
+}
