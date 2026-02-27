@@ -1346,7 +1346,8 @@
         <!-- Anuncio Leaderboard superior (después de la búsqueda) -->
         <div class="ad-unit">
             <div>
-                [ZONA DE ANUNCIO]
+                <div class="ad-label"><i class="fas fa-ad"></i> Publicidad</div>
+                [ZONA DE ANUNCIO 1 - 728x90]
             </div>
         </div>
 
@@ -1369,7 +1370,8 @@
                 <!-- Anuncio entre platos y paginación -->
                 <div class="ad-unit" style="margin: 1rem auto;">
                     <div>
-                        [ZONA DE ANUNCIO]
+                        <div class="ad-label"><i class="fas fa-ad"></i> Publicidad</div>
+                        [ZONA DE ANUNCIO 2 - 728x90]
                     </div>
                 </div>
 
@@ -1387,7 +1389,8 @@
                 <!-- Anuncio cuadrado en sidebar (300x250) -->
                 <div class="sidebar-widget ad-unit" style="min-height: 250px; padding: 1rem;">
                     <div>
-                        [ZONA DE ANUNCIO]
+                        <div class="ad-label"><i class="fas fa-ad"></i> Publicidad</div>
+                        [ZONA DE ANUNCIO 3 - 300x250]
                     </div>
                 </div>
 
@@ -1399,7 +1402,8 @@
                 <!-- Anuncio adicional en sidebar -->
                 <div class="sidebar-widget ad-unit" style="min-height: 250px; padding: 1rem;">
                     <div>
-                        [ZONA DE ANUNCIO]
+                        <div class="ad-label"><i class="fas fa-ad"></i> Publicidad</div>
+                        [ZONA DE ANUNCIO 4 - 300x250]
                     </div>
                 </div>
 
@@ -1468,13 +1472,14 @@
         <div class="container" style="margin-top: 2rem;">
             <div class="ad-unit">
                 <div>
-                    [ZONA DE ANUNCIO]
+                    <div class="ad-label"><i class="fas fa-ad"></i> Publicidad</div>
+                    [ZONA DE ANUNCIO 5 - 728x90]
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript Actualizado con modal mejorado -->
+    <!-- JavaScript Actualizado con tiempo mínimo de carga de 2 segundos -->
     <script>
         // Variables globales
         let translations = {};
@@ -1533,37 +1538,46 @@
             return videoId ? `https://www.youtube.com/embed/${videoId}` : url;
         }
 
-        // Cargar traducciones y platos
+        // Cargar traducciones y platos con tiempo mínimo de 2 segundos
         function initializeApp() {
             showLoading(true, 'Explorando sabores del mundo...');
 
-            // Cargar idioma inicial y platos
-            Promise.all([
-                fetch(`lang_${currentLang}.json`).then(response => response.json()),
-                fetch('dishes.json').then(response => response.json())
-            ]).then(([langData, dishesData]) => {
-                translations = langData;
-                dishes = dishesData.dishes;
-                filteredDishes = dishes;
+            // Crear promesas para las cargas
+            const langPromise = fetch(`lang_${currentLang}.json`).then(response => response.json());
+            const dishesPromise = fetch('dishes.json').then(response => response.json());
 
-                console.log(`Traducciones cargadas para: ${currentLang}`);
-                console.log('Platos cargados:', dishes.length);
+            // Promesa para el tiempo mínimo de 2 segundos
+            const minDelayPromise = new Promise(resolve => setTimeout(resolve, 2000));
 
-                // Configurar elementos iniciales
-                setupLanguageSelector();
-                setupFilters();
-                displayDishes();
-                updatePagination();
-                updateSidebarWidgets();
-                showLoading(false);
+            // Esperar a que todas las promesas se resuelvan
+            Promise.all([langPromise, dishesPromise, minDelayPromise])
+                .then(([langData, dishesData]) => {
+                    translations = langData;
+                    dishes = dishesData.dishes;
+                    filteredDishes = dishes;
 
-                // Configurar event listeners
-                setupEventListeners();
+                    console.log(`Traducciones cargadas para: ${currentLang}`);
+                    console.log('Platos cargados:', dishes.length);
 
-            }).catch(error => {
-                console.error('Error cargando datos:', error);
-                showLoading(false);
-            });
+                    // Configurar elementos iniciales
+                    setupLanguageSelector();
+                    setupFilters();
+                    displayDishes();
+                    updatePagination();
+                    updateSidebarWidgets();
+
+                    // Ocultar loading después de que todo esté listo
+                    showLoading(false);
+
+                    // Configurar event listeners
+                    setupEventListeners();
+
+                })
+                .catch(error => {
+                    console.error('Error cargando datos:', error);
+                    // En caso de error, igual ocultar loading después de 2 segundos
+                    setTimeout(() => showLoading(false), 2000);
+                });
         }
 
         // Configurar selector de idioma
