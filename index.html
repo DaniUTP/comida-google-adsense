@@ -1,0 +1,2186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Gastronomía Mundial | +100 Platos Gastronómicos del Mundo</title>
+    <meta name="description"
+        content="Colección de más de 100 platos gastronómicos internacionales con recetas detalladas, ingredientes exactos y video tutoriales paso a paso.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #1d3557;
+            --accent-color: #f4a261;
+            --light-color: #f1faee;
+            --dark-color: #1d3557;
+            --gradient-primary: linear-gradient(135deg, #e63946, #ff6b6b);
+            --gradient-secondary: linear-gradient(135deg, #1d3557, #457b9d);
+            --gradient-accent: linear-gradient(135deg, #f4a261, #e9c46a);
+            --gradient-hero: linear-gradient(rgba(29, 53, 87, 0.9), rgba(69, 123, 157, 0.9));
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+            --border-radius: 20px;
+            --border-radius-lg: 30px;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: var(--dark-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Header Mejorado */
+        header {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-bar {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 0.5rem 0;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            gap: 1rem;
+        }
+
+        .stats-container {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .stat-icon {
+            background: var(--gradient-accent);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .main-header {
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            background: var(--gradient-accent);
+            width: clamp(40px, 6vw, 50px);
+            height: clamp(40px, 6vw, 50px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            flex-shrink: 0;
+        }
+
+        .language-selector {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 15px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 500;
+            min-width: 120px;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+            font-size: 0.9rem;
+        }
+
+        .language-selector option {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .language-selector:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section Rediseñada */
+        .hero {
+            background: var(--gradient-hero), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll;
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 3vw, 1.4rem);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-weight: 300;
+            padding: 0 1rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: clamp(1rem, 5vw, 3rem);
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            text-align: center;
+            min-width: 100px;
+        }
+
+        .hero-stat-number {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 700;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero-stat-label {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Search Bar Mejorada */
+        .search-container {
+            max-width: 700px;
+            margin: 2rem auto;
+            position: relative;
+            width: 100%;
+        }
+
+        #search-input {
+            width: 100%;
+            padding: 1rem 3.5rem 1rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow);
+        }
+
+        #search-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        /* Filtros Rediseñados */
+        .filter-section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin: 1.5rem 0;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .filter-title {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: clamp(1.2rem, 4vw, 1.6rem);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .filter-title i {
+            color: var(--accent-color);
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 2px solid #e9ecef;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            white-space: nowrap;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active {
+            background: var(--gradient-primary);
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 5px 15px rgba(230, 57, 70, 0.2);
+        }
+
+        /* Main Content */
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .ad-unit {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border: 2px dashed #ced4da;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1.5rem auto;
+            overflow: hidden;
+            text-align: center;
+            color: #6c757d;
+            border-radius: var(--border-radius);
+            position: relative;
+            font-style: italic;
+            width: 100%;
+            min-height: 90px;
+            padding: 1rem;
+        }
+
+        .ad-label {
+            font-size: 0.7rem;
+            color: #adb5bd;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            justify-content: center;
+        }
+
+        .content-wrapper {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            align-items: flex-start;
+            flex: 1;
+        }
+
+        main {
+            flex: 1;
+            min-width: 0;
+            width: 100%;
+        }
+
+        aside {
+            flex: 0 0 300px;
+            position: sticky;
+            top: 120px;
+            align-self: flex-start;
+        }
+
+        /* Tarjetas de Plato Rediseñadas */
+        .dishes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            min-height: 400px;
+        }
+
+        .dish-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dish-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .dish-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 2;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(230, 57, 70, 0.2);
+        }
+
+        .dish-image-container {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .dish-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+
+        .dish-card:hover .dish-image {
+            transform: scale(1.1);
+        }
+
+        .dish-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dish-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+            line-height: 1.3;
+            font-weight: 700;
+        }
+
+        .dish-country {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+        }
+
+        .dish-country i {
+            font-size: 1rem;
+        }
+
+        .dish-meta {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .dish-meta-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 0.5rem 0.2rem;
+            gap: 0.2rem;
+            border: 1px solid #eef0f3;
+            text-align: center;
+        }
+
+        .dish-meta-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--gradient-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: white;
+            margin-bottom: 0.1rem;
+        }
+
+        .dish-meta-value {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            line-height: 1.2;
+        }
+
+        .dish-meta-label {
+            font-size: 0.65rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            line-height: 1;
+        }
+
+        .dish-description {
+            color: #666;
+            margin-bottom: 1.2rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            flex-grow: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            line-clamp: 3;
+            overflow: hidden;
+        }
+
+        .dish-details-btn {
+            display: inline-block;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.8rem 1.2rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-top: auto;
+        }
+
+        .dish-details-btn:hover {
+            background: linear-gradient(135deg, #d62828, #e63946);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(230, 57, 70, 0.3);
+        }
+
+        /* Paginación Mejorada */
+        .pagination-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem 0;
+            gap: 0.3rem;
+            flex-wrap: wrap;
+        }
+
+        .page-btn {
+            padding: 0.6rem 1rem;
+            border: 2px solid #e9ecef;
+            background: white;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+            font-size: 0.85rem;
+            min-width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page-btn:hover:not(.active):not(.disabled) {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .page-btn.active {
+            background: var(--gradient-primary);
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 4px 12px rgba(230, 57, 70, 0.2);
+        }
+
+        .page-btn.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background-color: #f5f5f5;
+        }
+
+        .page-info {
+            text-align: center;
+            color: #666;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            font-style: italic;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        /* Sidebar Widgets Rediseñados */
+        .sidebar-widget {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .sidebar-widget:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .sidebar-widget h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 3px solid var(--accent-color);
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sidebar-widget h3 i {
+            color: var(--accent-color);
+        }
+
+        .cuisine-list,
+        .trending-list {
+            list-style-type: none;
+        }
+
+        .cuisine-list li,
+        .trending-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .cuisine-list li:hover,
+        .trending-list li:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin: 0 -0.5rem;
+            padding: 0.8rem 0.5rem;
+        }
+
+        .cuisine-count {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            min-width: 28px;
+            text-align: center;
+        }
+
+        .trending-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0.8rem 0;
+        }
+
+        .trending-rank {
+            background: var(--gradient-primary);
+            color: white;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* ========== MODAL MEJORADO ========== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            padding: 1rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            max-width: 1000px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            transform: translateY(-30px) scale(0.95);
+            transition: transform 0.5s ease;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-overlay.active .modal {
+            transform: translateY(0) scale(1);
+        }
+
+        .modal-header {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: clamp(1.2rem, 4vw, 1.8rem);
+            font-family: 'Playfair Display', serif;
+            padding-right: 1rem;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        .modal-section {
+            margin-bottom: 2rem;
+        }
+
+        .modal-section h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .modal-section h3 i {
+            color: var(--accent-color);
+        }
+
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 0.8rem;
+        }
+
+        .ingredient-item {
+            padding: 0.8rem 1rem;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8f9fa;
+            transition: var(--transition);
+            font-size: 0.9rem;
+            gap: 0.5rem;
+        }
+
+        .ingredient-item:hover {
+            background: #fff;
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .ingredient-name {
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .ingredient-quantity {
+            color: var(--primary-color);
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .instructions-list {
+            list-style-type: none;
+            padding: 0;
+            counter-reset: step-counter;
+        }
+
+        .instructions-list li {
+            margin-bottom: 1rem;
+            padding: 0.8rem 0.8rem 0.8rem 2.2rem;
+            background: #f8f9fa;
+            border-radius: var(--border-radius);
+            position: relative;
+            counter-increment: step-counter;
+            border-left: 4px solid var(--accent-color);
+            font-size: 0.95rem;
+        }
+
+        .instructions-list li::before {
+            content: counter(step-counter);
+            background: var(--gradient-primary);
+            color: white;
+            font-weight: bold;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8rem;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer Rediseñado */
+        footer {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 3rem 0 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h4 {
+            color: var(--accent-color);
+            margin-bottom: 1.2rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .footer-column p {
+            color: #ddd;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            list-style-type: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        .footer-links a i {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.85rem;
+        }
+
+        /* Loading Overlay Mejorado */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(29, 53, 87, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+        }
+
+        .loading-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .loading-content {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+            max-width: 90%;
+        }
+
+        .loading-overlay.active .loading-content {
+            transform: translateY(0);
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        /* Media Queries Optimizadas */
+        @media (max-width: 1024px) {
+            .content-wrapper {
+                gap: 1.5rem;
+            }
+
+            aside {
+                flex: 0 0 280px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            aside {
+                width: 100%;
+                position: static;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1rem;
+            }
+
+            .sidebar-widget {
+                margin-bottom: 0;
+            }
+
+            .hero-stats {
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar-content {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .stats-container {
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .language-selector {
+                width: 100%;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .logo {
+                justify-content: center;
+            }
+
+            .filter-buttons {
+                gap: 0.5rem;
+            }
+
+            .filter-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .dishes-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                gap: 1rem;
+            }
+
+            .hero {
+                padding: 3rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .modal-body {
+                padding: 1rem;
+            }
+
+            .ingredients-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero-stat {
+                min-width: auto;
+            }
+
+            .dishes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-section {
+                padding: 1rem;
+            }
+
+            .filter-btn {
+                width: 100%;
+                justify-content: center;
+                white-space: normal;
+            }
+
+            .pagination-container {
+                gap: 0.2rem;
+            }
+
+            .page-btn {
+                padding: 0.5rem 0.8rem;
+                min-width: 35px;
+                font-size: 0.8rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .modal-header {
+                padding: 1rem;
+            }
+
+            .modal-header h2 {
+                font-size: 1.2rem;
+            }
+
+            .modal-close {
+                font-size: 1.5rem;
+                width: 35px;
+                height: 35px;
+            }
+
+            .modal-section h3 {
+                font-size: 1.1rem;
+            }
+
+            .ingredient-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.3rem;
+            }
+
+            .ingredient-quantity {
+                white-space: normal;
+            }
+
+            .instructions-list li {
+                font-size: 0.85rem;
+                padding: 0.7rem 0.7rem 0.7rem 2rem;
+            }
+
+            .instructions-list li::before {
+                width: 22px;
+                height: 22px;
+                font-size: 0.75rem;
+                left: -11px;
+            }
+        }
+
+        /* Animaciones */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dish-card {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p id="loading-text">Explorando sabores del mundo...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-flag"></i>
+                        </div>
+                        <span id="stats-countries">50+ Países</span>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <span id="stats-dishes">100+ Platos</span>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <span id="stats-videos">100+ Videos</span>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <span id="stats-updated">Actualizado Diario</span>
+                    </div>
+                </div>
+                <select id="languageSelector" class="language-selector" title="Seleccionar idioma">
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="it">🇮🇹 Italiano</option>
+                    <option value="de">🇩🇪 Deutsch</option>
+                    <option value="pt">🇵🇹 Português</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="main-header">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <span id="header-logo">Gastronomía Mundial</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="hero-title">Sabores Auténticos del Mundo</h1>
+            <p class="hero-subtitle" id="hero-description">Descubre la colección más completa de recetas internacionales
+                con ingredientes exactos y video tutoriales paso a paso</p>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-number">50+</div>
+                    <div class="hero-stat-label">Países</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">100+</div>
+                    <div class="hero-stat-label">Platos</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">100+</div>
+                    <div class="hero-stat-label">Videos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Bar -->
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar platos, ingredientes o países...">
+            <div class="search-icon"><i class="fas fa-search"></i></div>
+        </div>
+
+        <!-- Anuncio Leaderboard superior (después de la búsqueda) -->
+        <div class="ad-unit">
+            <div>
+                [ZONA DE ANUNCIO]
+            </div>
+        </div>
+
+        <!-- Filtros -->
+        <div class="filter-section">
+            <h3 class="filter-title"><i class="fas fa-filter"></i> <span id="filter-title-continent">Explorar por
+                    Continente</span></h3>
+            <div class="filter-buttons" id="continent-filters"></div>
+
+            <h3 class="filter-title" style="margin-top: 1.5rem;"><i class="fas fa-utensils"></i> <span
+                    id="filter-title-cuisine">Tipos de Cocina</span></h3>
+            <div class="filter-buttons" id="cuisine-filters"></div>
+        </div>
+
+        <!-- Contenido Principal -->
+        <div class="content-wrapper">
+            <main>
+                <div class="dishes-grid" id="dishes-container"></div>
+
+                <!-- Anuncio entre platos y paginación -->
+                <div class="ad-unit" style="margin: 1rem auto;">
+                    <div>
+                        [ZONA DE ANUNCIO]
+                    </div>
+                </div>
+
+                <div class="pagination-container" id="pagination-container"></div>
+                <div class="page-info" id="page-info"></div>
+            </main>
+
+            <aside>
+                <!-- Widgets de Sidebar -->
+                <div class="sidebar-widget">
+                    <h3><i class="fas fa-fire"></i> <span id="cuisines-title">Cocinas Populares</span></h3>
+                    <ul class="cuisine-list" id="cuisine-list"></ul>
+                </div>
+
+                <!-- Anuncio cuadrado en sidebar (300x250) -->
+                <div class="sidebar-widget ad-unit" style="min-height: 250px; padding: 1rem;">
+                    <div>
+                        [ZONA DE ANUNCIO]
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3><i class="fas fa-chart-line"></i> <span id="trending-title">Tendencias del Día</span></h3>
+                    <ul class="trending-list" id="trending-list"></ul>
+                </div>
+
+                <!-- Anuncio adicional en sidebar -->
+                <div class="sidebar-widget ad-unit" style="min-height: 250px; padding: 1rem;">
+                    <div>
+                        [ZONA DE ANUNCIO]
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3><i class="fas fa-globe-americas"></i> <span id="continents-title">Por Continente</span></h3>
+                    <ul class="cuisine-list" id="continents-list"></ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4 id="about-title">Sobre Nosotros</h4>
+                    <p id="about-text">Somos apasionados por la gastronomía mundial. Nuestra misión es llevar los
+                        sabores auténticos de cada rincón del planeta a tu cocina, con recetas verificadas y tutoriales
+                        paso a paso.</p>
+                </div>
+                <div class="footer-column">
+                    <h4 id="quick-links-title">Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-home"></i> <span id="link-home">Inicio</span></a></li>
+                        <li><a href="#"><i class="fas fa-flag"></i> <span id="link-recipes">Recetas por País</span></a>
+                        </li>
+                        <li><a href="#"><i class="fas fa-video"></i> <span id="link-videos">Video Tutoriales</span></a>
+                        </li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> <span id="link-contact">Contacto</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 id="categories-title">Categorías Populares</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-pizza-slice"></i> <span id="link-italian">Italiana</span></a>
+                        </li>
+                        <li><a href="#"><i class="fas fa-pepper-hot"></i> <span id="link-mexican">Mexicana</span></a>
+                        </li>
+                        <li><a href="#"><i class="fas fa-utensils"></i> <span id="link-asian">Asiática</span></a></li>
+                        <li><a href="#"><i class="fas fa-leaf"></i> <span
+                                    id="link-mediterranean">Mediterránea</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 id="resources-title">Recursos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-book"></i> <span id="link-ingredients">Guía de
+                                    Ingredientes</span></a></li>
+                        <li><a href="#"><i class="fas fa-graduation-cap"></i> <span id="link-techniques">Técnicas de
+                                    Cocina</span></a></li>
+                        <li><a href="#"><i class="fas fa-balance-scale"></i> <span
+                                    id="link-conversions">Conversiones</span></a></li>
+                        <li><a href="#"><i class="fas fa-calendar-alt"></i> <span id="link-seasonal">De
+                                    Temporada</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p id="copyright-text">© 2025 Gastronomía Mundial. Todos los derechos reservados. | Descubre sabores
+                    auténticos de todo el mundo.</p>
+            </div>
+        </div>
+
+        <!-- Anuncio en el footer -->
+        <div class="container" style="margin-top: 2rem;">
+            <div class="ad-unit">
+                <div>
+                    [ZONA DE ANUNCIO]
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Actualizado con tiempo mínimo de carga de 2 segundos -->
+    <script>
+        // Variables globales
+        let translations = {};
+        let dishes = [];
+        let currentLang = 'es';
+        let filteredDishes = [];
+        let currentContinent = 'all';
+        let currentCuisine = 'all';
+        let currentPage = 1;
+        const dishesPerPage = 9;
+
+        // Función para mostrar loading overlay
+        function showLoading(show = true, message = null) {
+            const loadingOverlay = document.getElementById('loading-overlay');
+            const loadingText = document.getElementById('loading-text');
+
+            if (message && loadingText) {
+                loadingText.textContent = message;
+            }
+
+            if (show) {
+                loadingOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            } else {
+                loadingOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Función para mostrar loading en la grid
+        function showGridLoading() {
+            const container = document.getElementById('dishes-container');
+            container.innerHTML = `
+                <div style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
+                    <div class="loading-spinner" style="width: 40px; height: 40px; margin: 0 auto 1rem;"></div>
+                    <p style="color: #666;">Cargando platos...</p>
+                </div>
+            `;
+        }
+
+        // Función para convertir URL de YouTube
+        function getYoutubeEmbedUrl(url) {
+            if (!url) return '';
+            if (url.includes('/embed/')) return url;
+
+            let videoId = '';
+            if (url.includes('youtu.be/')) {
+                videoId = url.split('youtu.be/')[1].split('?')[0].split('&')[0];
+            } else if (url.includes('youtube.com/watch')) {
+                const params = new URLSearchParams(url.split('?')[1]);
+                videoId = params.get('v');
+            } else if (url.includes('youtube.com') && url.includes('v=')) {
+                videoId = url.split('v=')[1].split('&')[0];
+            }
+
+            return videoId ? `https://www.youtube.com/embed/${videoId}` : url;
+        }
+
+        // Cargar traducciones y platos con tiempo mínimo de 2 segundos
+        function initializeApp() {
+            showLoading(true, 'Explorando sabores del mundo...');
+
+            // Crear promesas para las cargas
+            const langPromise = fetch(`lang_${currentLang}.json`).then(response => response.json());
+            const dishesPromise = fetch('dishes.json').then(response => response.json());
+
+            // Promesa para el tiempo mínimo de 2 segundos
+            const minDelayPromise = new Promise(resolve => setTimeout(resolve, 2000));
+
+            // Esperar a que todas las promesas se resuelvan
+            Promise.all([langPromise, dishesPromise, minDelayPromise])
+                .then(([langData, dishesData]) => {
+                    translations = langData;
+                    dishes = dishesData.dishes;
+                    filteredDishes = dishes;
+
+                    console.log(`Traducciones cargadas para: ${currentLang}`);
+                    console.log('Platos cargados:', dishes.length);
+
+                    // Configurar elementos iniciales
+                    setupLanguageSelector();
+                    setupFilters();
+                    displayDishes();
+                    updatePagination();
+                    updateSidebarWidgets();
+
+                    // Ocultar loading después de que todo esté listo
+                    showLoading(false);
+
+                    // Configurar event listeners
+                    setupEventListeners();
+
+                })
+                .catch(error => {
+                    console.error('Error cargando datos:', error);
+                    // En caso de error, igual ocultar loading después de 2 segundos
+                    setTimeout(() => showLoading(false), 2000);
+                });
+        }
+
+        // Configurar selector de idioma
+        function setupLanguageSelector() {
+            const selector = document.getElementById('languageSelector');
+            if (selector) {
+                selector.value = currentLang;
+            }
+        }
+
+        // Mensajes de carga según idioma
+        const langLoadingMessages = {
+            'es': 'Aplicando idioma...', 'en': 'Applying language...',
+            'fr': 'Application de la langue...', 'it': 'Applicazione della lingua...',
+            'de': 'Sprache wird angewendet...', 'pt': 'Aplicando idioma...'
+        };
+
+        // Función para cambiar idioma
+        function changeLanguage(lang) {
+            const loadingMsg = langLoadingMessages[lang] || 'Applying language...';
+            showLoading(true, loadingMsg);
+
+            // Garantizar mínimo 2 segundos de loading visible
+            const minDelay = new Promise(resolve => setTimeout(resolve, 2000));
+            const langFetch = fetch(`lang_${lang}.json`).then(response => response.json());
+
+            Promise.all([langFetch, minDelay])
+                .then(([langData]) => {
+                    currentLang = lang;
+                    document.documentElement.lang = lang;
+                    translations = langData;
+
+                    // Actualizar textos de la interfaz
+                    updateElement('header-logo', langData.header?.logo);
+                    updateElement('stats-countries', langData.header?.stats?.countries);
+                    updateElement('stats-dishes', langData.header?.stats?.dishes);
+                    updateElement('stats-videos', langData.header?.stats?.videos);
+                    updateElement('stats-updated', langData.header?.stats?.updated);
+                    updateElement('hero-title', langData.hero?.title);
+                    updateElement('hero-description', langData.hero?.description);
+                    updateElement('filter-title-continent', langData.filters?.continent);
+                    updateElement('filter-title-cuisine', langData.filters?.cuisine);
+                    updateElement('cuisines-title', langData.sidebar?.topCuisines);
+                    updateElement('trending-title', langData.sidebar?.trending);
+                    updateElement('continents-title', langData.sidebar?.continents);
+                    updateElement('about-title', langData.footer?.about?.title);
+                    updateElement('about-text', langData.footer?.about?.text);
+                    updateElement('quick-links-title', langData.footer?.quickLinks?.title);
+                    updateElement('link-home', langData.footer?.quickLinks?.home);
+                    updateElement('link-recipes', langData.footer?.quickLinks?.recipes);
+                    updateElement('link-videos', langData.footer?.quickLinks?.videos);
+                    updateElement('link-contact', langData.footer?.quickLinks?.contact);
+                    updateElement('categories-title', langData.footer?.categories?.title);
+                    updateElement('link-italian', langData.footer?.categories?.italian);
+                    updateElement('link-mexican', langData.footer?.categories?.mexican);
+                    updateElement('link-asian', langData.footer?.categories?.asian);
+                    updateElement('link-mediterranean', langData.footer?.categories?.mediterranean);
+                    updateElement('resources-title', langData.footer?.resources?.title);
+                    updateElement('link-ingredients', langData.footer?.resources?.ingredients);
+                    updateElement('link-techniques', langData.footer?.resources?.techniques);
+                    updateElement('link-conversions', langData.footer?.resources?.conversions);
+                    updateElement('link-seasonal', langData.footer?.resources?.seasonal);
+                    updateElement('copyright-text', langData.footer?.copyright);
+
+                    const searchInput = document.getElementById('search-input');
+                    if (searchInput) searchInput.placeholder = langData.search?.placeholder;
+
+                    // Actualizar filtros y contenido
+                    setupFilters();
+                    displayDishes();
+                    updateSidebarWidgets();
+                    showLoading(false);
+                })
+                .catch(error => {
+                    console.error('Error al cargar el idioma:', error);
+                    showLoading(false);
+                });
+        }
+
+        // Función auxiliar para actualizar elementos
+        function updateElement(elementId, text) {
+            const element = document.getElementById(elementId);
+            if (element && text) element.textContent = text;
+        }
+
+        // Función simplificada para obtener traducción de tipo de cocina
+        function getCuisineTranslation(cuisineKey, langData) {
+            if (!cuisineKey || !langData || !langData.cuisines) return cuisineKey;
+
+            // Normalizar la clave: convertir a minúsculas y reemplazar espacios con guiones bajos
+            const normalizedKey = cuisineKey.toLowerCase().replace(/ /g, '_');
+
+            // Buscar traducción directa
+            if (langData.cuisines[normalizedKey]) {
+                return langData.cuisines[normalizedKey];
+            }
+
+            // Si no se encuentra, devolver el nombre original formateado
+            return cuisineKey.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        }
+
+        // Función para configurar filtros
+        function setupFilters() {
+            const langData = translations;
+            if (!langData) return;
+
+            // Continentes
+            const continents = [
+                { id: 'all', name: 'all' },
+                { id: 'europe', name: 'europe' },
+                { id: 'asia', name: 'asia' },
+                { id: 'america', name: 'america' },
+                { id: 'africa', name: 'africa' },
+                { id: 'oceania', name: 'oceania' }
+            ];
+
+            // Cocinas únicas de los platos
+            const uniqueCuisines = [...new Set(dishes.map(dish => dish.cuisine))];
+            const cuisines = [
+                { id: 'all', name: 'all' },
+                ...uniqueCuisines.map(cuisine => ({ id: cuisine, name: cuisine }))
+            ];
+
+            // Renderizar filtros de continentes
+            const continentFiltersDiv = document.getElementById('continent-filters');
+            continentFiltersDiv.innerHTML = '';
+            continents.forEach(cont => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn' + (cont.id === currentContinent ? ' active' : '');
+
+                let btnText = cont.id === 'all' ?
+                    ({ 'es': 'Todos', 'en': 'All', 'fr': 'Tous', 'it': 'Tutti', 'de': 'Alle', 'pt': 'Todos' })[currentLang] || 'All' :
+                    langData.continents?.[cont.id] || cont.id;
+
+                btn.innerHTML = `<i class="fas fa-globe-${cont.id === 'all' ? 'americas' : cont.id}"></i> ${btnText}`;
+                btn.dataset.continent = cont.id;
+                btn.addEventListener('click', () => handleContinentFilter(cont.id, btn));
+                continentFiltersDiv.appendChild(btn);
+            });
+
+            // Renderizar filtros de cocina
+            const cuisineFiltersDiv = document.getElementById('cuisine-filters');
+            cuisineFiltersDiv.innerHTML = '';
+
+            // Mapa de íconos representativos por tipo de cocina
+            const cuisineIcons = {
+                'all': 'utensils',
+                'mediterranean': 'sun',
+                'italian': 'pizza-slice',
+                'mexican': 'pepper-hot',
+                'japanese': 'fish',
+                'thai': 'mortar-pestle',
+                'french': 'wine-glass-alt',
+                'peruvian': 'leaf',
+                'brazilian': 'drumstick-bite',
+                'hungarian': 'fire',
+                'indian': 'mortar-pestle',
+                'vietnamese': 'bowl-rice',
+                'chinese': 'yin-yang',
+                'argentinian': 'drumstick-bite',
+                'american': 'hamburger',
+                'british': 'mug-hot',
+                'canadian': 'leaf',
+                'eastern_european': 'snowflake',
+                'turkish': 'mosque',
+                'moroccan': 'star-and-crescent',
+                'colombian': 'mug-hot',
+                'west_african': 'sun',
+                'korean': 'fire-alt',
+                'south_african': 'sun',
+                'venezuelan': 'seedling',
+                'german': 'beer',
+                'australian': 'globe-asia',
+                'malaysian': 'leaf',
+                'arabic': 'moon',
+                'portuguese': 'fish',
+                'swiss': 'snowflake',
+                'scottish': 'cloud',
+                'belgian': 'cookie',
+                'spanish': 'wine-bottle',
+                'dominican': 'umbrella-beach',
+                'balkan': 'mountain',
+                'indonesian': 'leaf',
+                'russian': 'snowflake',
+                'hawaiian': 'umbrella-beach',
+                'swedish': 'snowflake',
+                'latin_american': 'globe-americas',
+                'chilean': 'mountain',
+                'festive': 'star',
+                'bulgarian': 'seedling'
+            };
+
+            cuisines.forEach(cuisine => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn' + (cuisine.id === currentCuisine ? ' active' : '');
+
+                let btnText = '';
+                if (cuisine.id === 'all') {
+                    btnText = ({ 'es': 'Todas', 'en': 'All', 'fr': 'Toutes', 'it': 'Tutte', 'de': 'Alle', 'pt': 'Todas' })[currentLang] || 'All';
+                } else {
+                    btnText = getCuisineTranslation(cuisine.id, langData);
+                }
+
+                const icon = cuisineIcons[cuisine.id] || 'utensils';
+                btn.innerHTML = `<i class="fas fa-${icon}"></i> ${btnText}`;
+                btn.dataset.cuisine = cuisine.id;
+                btn.addEventListener('click', () => handleCuisineFilter(cuisine.id, btn));
+                cuisineFiltersDiv.appendChild(btn);
+            });
+
+        }
+
+        // Manejadores de filtros
+        function handleContinentFilter(continentId, button) {
+            showGridLoading();
+            setTimeout(() => {
+                document.querySelectorAll('#continent-filters .filter-btn').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                currentContinent = continentId;
+                applyFilters();
+            }, 300);
+        }
+
+        function handleCuisineFilter(cuisineId, button) {
+            showGridLoading();
+            setTimeout(() => {
+                document.querySelectorAll('#cuisine-filters .filter-btn').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                currentCuisine = cuisineId;
+                applyFilters();
+            }, 300);
+        }
+
+        // Aplicar filtros
+        function applyFilters() {
+            filteredDishes = dishes.filter(dish => {
+                const matchContinent = currentContinent === 'all' || dish.continent === currentContinent;
+                const matchCuisine = currentCuisine === 'all' || dish.cuisine === currentCuisine;
+                return matchContinent && matchCuisine;
+            });
+            currentPage = 1;
+            displayDishes();
+            updatePagination();
+        }
+
+        // Mostrar platos
+        function displayDishes() {
+            const container = document.getElementById('dishes-container');
+            const langData = translations;
+
+            if (filteredDishes.length === 0) {
+                const noFoundTitle = currentLang === 'es' ? 'No se encontraron platos' : (langData.search?.noResults || 'No dishes found');
+                const noFoundText = currentLang === 'es' ? 'Intenta con otros filtros o términos de búsqueda.' : (langData.search?.noResultsText || 'Try other filters or search terms.');
+                const resetBtnText = currentLang === 'es' ? 'Mostrar todos los platos' : (langData.search?.resetFilters || 'Show all dishes');
+
+                container.innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; background: white; border-radius: var(--border-radius); box-shadow: var(--shadow);">
+                        <i class="fas fa-utensils" style="font-size: 3rem; color: #ddd; margin-bottom: 1rem;"></i>
+                        <h3 style="color: var(--secondary-color); margin-bottom: 0.5rem;">${noFoundTitle}</h3>
+                        <p style="color: #666; margin-bottom: 1.5rem;">${noFoundText}</p>
+                        <button onclick="resetFilters()" style="background: var(--gradient-primary); color: white; padding: 0.8rem 1.5rem; border: none; border-radius: var(--border-radius); font-weight: 600; cursor: pointer;">
+                            ${resetBtnText}
+                        </button>
+                    </div>
+                `;
+                return;
+            }
+
+            const startIndex = (currentPage - 1) * dishesPerPage;
+            const endIndex = startIndex + dishesPerPage;
+            const dishesToShow = filteredDishes.slice(startIndex, endIndex);
+
+            // UI Label translations
+            const viewRecipeText = langData.ui?.viewRecipe || 'Ver Receta';
+            const difficultyLabel = langData.ui?.difficulty || 'Dificultad';
+            const servingsLabel = langData.ui?.servings || 'Porciones';
+
+            container.innerHTML = '';
+            dishesToShow.forEach((dish, index) => {
+                setTimeout(() => {
+                    const dishName = dish[`name_${currentLang}`] || dish.name_es;
+                    const dishDescription = dish[`description_${currentLang}`] || dish.description_es;
+                    const countryName = langData.countries?.[dish.country] || dish.country;
+                    const translatedDifficulty = langData.difficulties?.[dish.difficulty] || dish.difficulty;
+                    const totalTime = Number.parseInt(dish.prepTime) + Number.parseInt(dish.cookTime);
+
+                    const card = document.createElement('div');
+                    card.className = 'dish-card';
+                    card.style.animationDelay = `${index * 0.1}s`;
+                    card.innerHTML = `
+                        <div class="dish-badge">${countryName}</div>
+                        <div class="dish-image-container">
+                            <img src="${dish.image || 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'}" alt="${dishName}" class="dish-image" loading="lazy">
+                        </div>
+                        <div class="dish-content">
+                            <h3 class="dish-title">${dishName}</h3>
+                            <div class="dish-country">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>${countryName}</span>
+                            </div>
+                            <div class="dish-meta">
+                                <div class="dish-meta-item">
+                                    <div class="dish-meta-icon"><i class="fas fa-clock"></i></div>
+                                    <span class="dish-meta-value">${totalTime} min</span>
+                                    <span class="dish-meta-label">${langData.ui?.timeLabel || 'Tiempo'}</span>
+                                </div>
+                                <div class="dish-meta-item">
+                                    <div class="dish-meta-icon"><i class="fas fa-users"></i></div>
+                                    <span class="dish-meta-value">${dish.servings}</span>
+                                    <span class="dish-meta-label">${servingsLabel}</span>
+                                </div>
+                                <div class="dish-meta-item">
+                                    <div class="dish-meta-icon"><i class="fas fa-fire"></i></div>
+                                    <span class="dish-meta-value">${translatedDifficulty}</span>
+                                    <span class="dish-meta-label">${difficultyLabel}</span>
+                                </div>
+                            </div>
+                            <p class="dish-description">${dishDescription}</p>
+                            <button class="dish-details-btn" onclick="showRecipeModal(${dish.id})">
+                                <i class="fas fa-book-open"></i> ${viewRecipeText}
+                            </button>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                }, index * 50);
+            });
+        }
+
+        // Resetear filtros
+        function resetFilters() {
+            showGridLoading();
+            setTimeout(() => {
+                currentContinent = 'all';
+                currentCuisine = 'all';
+
+                document.querySelectorAll('#continent-filters .filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.dataset.continent === 'all') btn.classList.add('active');
+                });
+
+                document.querySelectorAll('#cuisine-filters .filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.dataset.cuisine === 'all') btn.classList.add('active');
+                });
+
+                document.getElementById('search-input').value = '';
+                applyFilters();
+            }, 300);
+        }
+
+        // Modal de receta (MEJORADO)
+        function showRecipeModal(dishId) {
+            const dish = dishes.find(d => d.id == dishId);
+            if (!dish) return;
+
+            const dishName = dish[`name_${currentLang}`] || dish.name_es;
+            const langData = translations;
+
+            const ingredientsTitle = langData.modal?.ingredients || 'Ingredientes';
+            const instructionsTitle = langData.modal?.instructions || 'Preparación';
+            const videoTitle = langData.modal?.video?.title || 'Video Tutorial';
+
+            let ingredientsHTML = '';
+            dish.ingredients.forEach(ing => {
+                const ingName = ing[`name_${currentLang}`] || ing.name_es;
+                ingredientsHTML += `
+                    <div class="ingredient-item">
+                        <span class="ingredient-name">${ingName}</span>
+                        <span class="ingredient-quantity">${ing.quantity} ${ing.unit}</span>
+                    </div>
+                `;
+            });
+
+            let instructionsHTML = '';
+            dish.instructions.forEach(instr => {
+                const instrText = instr[`text_${currentLang}`] || instr.text_es;
+                instructionsHTML += `<li>${instrText}</li>`;
+            });
+
+            const modalHTML = `
+                <div class="modal-overlay active" id="recipeModal">
+                    <div class="modal">
+                        <div class="modal-header">
+                            <h2>${dishName}</h2>
+                            <button class="modal-close" onclick="closeRecipeModal()">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-section">
+                                <h3><i class="fas fa-list"></i> ${ingredientsTitle}</h3>
+                                <div class="ingredients-grid">
+                                    ${ingredientsHTML}
+                                </div>
+                            </div>
+
+                            <div class="modal-section">
+                                <h3><i class="fas fa-utensils"></i> ${instructionsTitle}</h3>
+                                <ol class="instructions-list">
+                                    ${instructionsHTML}
+                                </ol>
+                            </div>
+
+                            <div class="modal-section">
+                                <h3><i class="fas fa-video"></i> ${videoTitle}</h3>
+                                <div class="video-container">
+                                    <iframe src="${getYoutubeEmbedUrl(dish.youtubeUrl)}" allowfullscreen loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            const oldModal = document.getElementById('recipeModal');
+            if (oldModal) oldModal.remove();
+
+            document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+            document.getElementById('recipeModal').addEventListener('click', function (e) {
+                if (e.target === this) closeRecipeModal();
+            });
+        }
+
+        // Cerrar modal
+        function closeRecipeModal() {
+            const modal = document.getElementById('recipeModal');
+            if (modal) {
+                modal.classList.remove('active');
+                setTimeout(() => modal.remove(), 300);
+            }
+        }
+
+        // Paginación
+        function goToPage(pageNum) {
+            showGridLoading();
+            setTimeout(() => {
+                currentPage = pageNum;
+                displayDishes();
+                updatePagination();
+                document.getElementById('dishes-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 300);
+        }
+
+        function updatePagination() {
+            const container = document.getElementById('pagination-container');
+            const pageInfo = document.getElementById('page-info');
+
+            container.innerHTML = '';
+            pageInfo.innerHTML = '';
+
+            const totalPages = Math.ceil(filteredDishes.length / dishesPerPage);
+            if (totalPages <= 1) return;
+
+            // Botón anterior
+            const prevBtn = document.createElement('button');
+            prevBtn.className = 'page-btn' + (currentPage === 1 ? ' disabled' : '');
+            prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
+            prevBtn.disabled = currentPage === 1;
+            prevBtn.addEventListener('click', () => currentPage > 1 && goToPage(currentPage - 1));
+            container.appendChild(prevBtn);
+
+            // Números de página
+            let startPage = Math.max(1, currentPage - 2);
+            let endPage = Math.min(totalPages, currentPage + 2);
+
+            if (startPage > 1) {
+                const firstBtn = document.createElement('button');
+                firstBtn.className = 'page-btn';
+                firstBtn.textContent = '1';
+                firstBtn.addEventListener('click', () => goToPage(1));
+                container.appendChild(firstBtn);
+                if (startPage > 2) {
+                    const dots = document.createElement('span');
+                    dots.textContent = '...';
+                    dots.style.padding = '0.3rem';
+                    container.appendChild(dots);
+                }
+            }
+
+            for (let i = startPage; i <= endPage; i++) {
+                const pageBtn = document.createElement('button');
+                pageBtn.className = 'page-btn' + (i === currentPage ? ' active' : '');
+                pageBtn.textContent = i;
+                pageBtn.addEventListener('click', () => goToPage(i));
+                container.appendChild(pageBtn);
+            }
+
+            if (endPage < totalPages) {
+                if (endPage < totalPages - 1) {
+                    const dots = document.createElement('span');
+                    dots.textContent = '...';
+                    dots.style.padding = '0.3rem';
+                    container.appendChild(dots);
+                }
+                const lastBtn = document.createElement('button');
+                lastBtn.className = 'page-btn';
+                lastBtn.textContent = totalPages;
+                lastBtn.addEventListener('click', () => goToPage(totalPages));
+                container.appendChild(lastBtn);
+            }
+
+            // Botón siguiente
+            const nextBtn = document.createElement('button');
+            nextBtn.className = 'page-btn' + (currentPage === totalPages ? ' disabled' : '');
+            nextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
+            nextBtn.disabled = currentPage === totalPages;
+            nextBtn.addEventListener('click', () => currentPage < totalPages && goToPage(currentPage + 1));
+            container.appendChild(nextBtn);
+
+            // Información
+            const startDish = (currentPage - 1) * dishesPerPage + 1;
+            const endDish = Math.min(currentPage * dishesPerPage, filteredDishes.length);
+            const showing = ({ 'es': 'Mostrando', 'en': 'Showing', 'fr': 'Affichage', 'it': 'Mostrando', 'de': 'Anzeige', 'pt': 'Mostrando' })[currentLang] || 'Showing';
+            const of = ({ 'es': 'de', 'en': 'of', 'fr': 'de', 'it': 'di', 'de': 'von', 'pt': 'de' })[currentLang] || 'of';
+            const dishesText = ({ 'es': 'platos', 'en': 'dishes', 'fr': 'plats', 'it': 'piatti', 'de': 'Gerichte', 'pt': 'pratos' })[currentLang] || 'dishes';
+            pageInfo.textContent = `${showing} ${startDish} - ${endDish} ${of} ${filteredDishes.length} ${dishesText}`;
+        }
+
+        // Sidebar widgets
+        function updateSidebarWidgets() {
+            const langData = translations;
+
+            // Top Cocinas
+            const cuisineList = document.getElementById('cuisine-list');
+            const cuisineMap = {};
+            dishes.forEach(dish => cuisineMap[dish.cuisine] = (cuisineMap[dish.cuisine] || 0) + 1);
+
+            cuisineList.innerHTML = '';
+            Object.entries(cuisineMap).sort((a, b) => b[1] - a[1]).slice(0, 8).forEach(([cuisine, count]) => {
+                const cuisineName = getCuisineTranslation(cuisine, langData);
+                const li = document.createElement('li');
+                li.innerHTML = `<span>${cuisineName}</span><span class="cuisine-count">${count}</span>`;
+                li.addEventListener('click', () => {
+                    const btn = document.querySelector(`#cuisine-filters .filter-btn[data-cuisine="${cuisine}"]`);
+                    if (btn) handleCuisineFilter(cuisine, btn);
+                });
+                cuisineList.appendChild(li);
+            });
+
+            // Trending
+            const trendingList = document.getElementById('trending-list');
+            trendingList.innerHTML = '';
+            dishes.slice(0, 8).forEach((dish, index) => {
+                const dishName = dish[`name_${currentLang}`] || dish.name_es;
+                const li = document.createElement('li');
+                li.innerHTML = `<span class="trending-rank">#${index + 1}</span><span>${dishName}</span>`;
+                li.addEventListener('click', () => showRecipeModal(dish.id));
+                trendingList.appendChild(li);
+            });
+
+            // Continentes
+            const continentsList = document.getElementById('continents-list');
+            const continentMap = {};
+            dishes.forEach(dish => continentMap[dish.continent] = (continentMap[dish.continent] || 0) + 1);
+
+            continentsList.innerHTML = '';
+            Object.entries(continentMap).sort((a, b) => b[1] - a[1]).forEach(([continent, count]) => {
+                const continentName = langData.continents?.[continent] || continent;
+                const li = document.createElement('li');
+                li.innerHTML = `<span>${continentName}</span><span class="cuisine-count">${count}</span>`;
+                li.addEventListener('click', () => {
+                    const btn = document.querySelector(`#continent-filters .filter-btn[data-continent="${continent}"]`);
+                    if (btn) handleContinentFilter(continent, btn);
+                });
+                continentsList.appendChild(li);
+            });
+        }
+
+        // Configurar event listeners
+        function setupEventListeners() {
+            const languageSelector = document.getElementById('languageSelector');
+            if (languageSelector) {
+                languageSelector.addEventListener('change', function () {
+                    changeLanguage(this.value);
+                });
+            }
+
+            const searchInput = document.getElementById('search-input');
+            if (searchInput) {
+                searchInput.addEventListener('input', function () {
+                    const searchTerm = this.value.toLowerCase();
+                    showGridLoading();
+                    setTimeout(() => {
+                        if (searchTerm === '') {
+                            filteredDishes = dishes.filter(dish =>
+                                (currentContinent === 'all' || dish.continent === currentContinent) &&
+                                (currentCuisine === 'all' || dish.cuisine === currentCuisine)
+                            );
+                        } else {
+                            filteredDishes = dishes.filter(dish => {
+                                const dishName = (dish[`name_${currentLang}`] || dish.name_es).toLowerCase();
+                                const dishDesc = (dish[`description_${currentLang}`] || dish.description_es).toLowerCase();
+                                const matchSearch = dishName.includes(searchTerm) || dishDesc.includes(searchTerm) || dish.country.toLowerCase().includes(searchTerm);
+                                return matchSearch && (currentContinent === 'all' || dish.continent === currentContinent) && (currentCuisine === 'all' || dish.cuisine === currentCuisine);
+                            });
+                        }
+                        currentPage = 1;
+                        displayDishes();
+                        updatePagination();
+                    }, 300);
+                });
+            }
+        }
+
+        // Inicializar la aplicación cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', function () {
+            initializeApp();
+        });
+    </script>
+</body>
+
+</html>
